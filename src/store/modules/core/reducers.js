@@ -1,13 +1,16 @@
+import { MOCK } from '../../../common/data/mock'
+
 // Types
 import {
   HANDLE_INPUT
-} from './types'
+}               from './types'
 
 // Utils
 import { createReducer } from '../../helpers/createReducer'
 
 const initialState = {
-  inputs: {}
+  inputs: {},
+  categories: MOCK.categories,
 }
 
 const coreReducer = createReducer(initialState, {
