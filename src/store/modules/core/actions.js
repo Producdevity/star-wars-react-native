@@ -7,7 +7,7 @@ import {
  * ACTION CREATORS
  */
 
-export const hanldeInputField = (field, value) => ({
+export const hanldeInput = (field, value) => ({
   type:    HANDLE_INPUT,
   payload: {field, value}
 })
