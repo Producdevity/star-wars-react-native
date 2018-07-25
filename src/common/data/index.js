@@ -3,5 +3,6 @@
  * consistent and prevent ourselfs from making bugs related to typos
  */
 
+export * from './fields'
 export * from './mock'
 export * from './routes'
