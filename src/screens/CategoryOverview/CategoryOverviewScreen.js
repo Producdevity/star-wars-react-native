@@ -6,8 +6,8 @@ import React, { Component } from 'react'
 import { FlatList, Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 
 // Redux
-import { connect }     from 'react-redux'
-import { hanldeInput } from '../../store/modules/core/actions'
+import { connect }                      from 'react-redux'
+import { hanldeInput, fetchCategories } from '../../store/modules/core/actions'
 
 // Utils
 import { getKeyByValue } from '../../common/utils'
@@ -16,6 +16,10 @@ import { getKeyByValue } from '../../common/utils'
 import { FIELDS, ROUTES } from '../../common/data'
 
 class CategoryOverviewScreen extends Component {
+
+  componentWillMount() {
+    this.props.fetchCategories()
+  }
 
   onPressListItem = (category: string) => {
     const {hanldeInput, navigation} = this.props
@@ -70,7 +74,8 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  hanldeInput
+  hanldeInput,
+  fetchCategories
 }
 
 

@@ -26,6 +26,10 @@ class Http {
         .then(res => res.json())
   }
 
+  getCategories() {
+    return this.get('')
+  }
+
   getByCategory(category) {
     return this.get(`/${category}`)
   }
