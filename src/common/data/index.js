@@ -3,4 +3,5 @@
  * consistent and prevent ourselfs from making bugs related to typos
  */
 
+export * from './mock'
 export * from './routes'
