@@ -102,4 +102,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps)(CategoryItemsOverviewScreen)
+export default connect(mapStateToProps)(ItemsOverviewScreen)
