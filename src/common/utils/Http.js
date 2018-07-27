@@ -21,7 +21,7 @@ class Http {
 
   // @private
   get(url) {
-    return fetch(this.defaults.BASE_URL, `${url}`)
+    return fetch(`${this.defaults.BASE_URL}${url}`)
         .then(handleStatus)
         .then(res => res.json())
   }
