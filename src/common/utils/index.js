@@ -3,6 +3,7 @@
  * (mostly helper functions)
  */
 
+export * from './filterOnAllValues'
 export * from './getKeyByValue'
 export * from './Http'
 export * from './is'

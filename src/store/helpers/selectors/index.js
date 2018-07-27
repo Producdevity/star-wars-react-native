@@ -1,17 +1,21 @@
 import { createSelector } from 'reselect'
-import { FIELDS }         from '../../../common/data'
 
-// selector
+// Data
+import { FIELDS } from '../../../common/data'
+
+// Utils
+import { filterOnAllValues } from '../../../common/utils'
+
+// selectors without logic
 const selectedCategorySelector = state => state.core.inputs[FIELDS.selectedCategory]
 const itemsSelector            = state => state.core.items
 const inputQuerySelector       = state => state.core.inputs.query
 
-
-// selector
-const getFilterenItems = (selectedCategory, items, query) => {
+// selectors with logic
+const getFilterenItems = (selectedCategory: string, items: Object, query: string | number) => {
   const listForCategory = items[selectedCategory]
   return listForCategory
-      ? listForCategory.results.filter(item => !item.name.includes(query))
+      ? filterOnAllValues(listForCategory.results, query)
       : []
 }
 
