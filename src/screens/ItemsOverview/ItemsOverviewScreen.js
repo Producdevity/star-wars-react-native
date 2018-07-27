@@ -16,7 +16,7 @@ class ItemsOverviewScreen extends Component {
   renderListItem = ({item}) => {
     return (
         <View style={styles.item} onPress={this.onPressListItem}>
-          <Text style={styles.item}>Name: {item.name}</Text>
+          <Text style={styles.item}>Name: {item.name || item.title}</Text>
         </View>
     )
   }
