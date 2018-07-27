@@ -30,7 +30,7 @@ const fetchItemsForCategoryDone = payload => ({
 })
 
 export const fetchItemsForCategory = ({category}) => async dispatch => {
-  dispatch(fetchCategoriesBegin())
+  dispatch(fetchItemsForCategoryBegin())
 
   try {
     const data = await http.getByCategory(category)
