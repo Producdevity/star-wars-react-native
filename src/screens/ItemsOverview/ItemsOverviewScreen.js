@@ -10,7 +10,7 @@ import { connect } from 'react-redux'
 import { MOCK }   from '../../common/data'
 import { FIELDS } from '../../common/data/fields'
 
-class CategoryItemsOverviewScreen extends Component {
+class ItemsOverviewScreen extends Component {
 
   renderListItem = ({item}) => {
     return (

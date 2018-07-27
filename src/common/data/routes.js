@@ -1,4 +1,4 @@
 export const ROUTES = {
-  CategoryOverview:      'CategoryOverview',
-  CategoryItemsOverview: 'CategoryItemsOverview'
+  CategoryOverview: 'CategoryOverview',
+  ItemsOverview:    'ItemsOverview'
 }
