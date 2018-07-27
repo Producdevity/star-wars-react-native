@@ -22,7 +22,14 @@ class ItemsOverviewScreen extends Component {
   }
 
   render() {
-    const {query, selectedCategory, items, navigation, handleInput} = this.props
+    const {
+            query,
+            loading,
+            selectedCategory,
+            items,
+            navigation,
+            handleInput
+          } = this.props
 
     return (
         <View style={styles.container}>
@@ -35,6 +42,8 @@ class ItemsOverviewScreen extends Component {
               value={query}
               placeholder='Search...'
           />
+
+          {(loading && items.length === 0) && <Text>Loading...</Text>}
 
           <FlatList
               data={items}
@@ -98,6 +107,7 @@ function mapStateToProps(state) {
     categories:       state.core.categories,
     selectedCategory: state.core.inputs[FIELDS.selectedCategory],
     query:            state.core.inputs[FIELDS.query],
+    loading:          state.core.loading,
     items:            getFilterenItemsState(state)
   }
 }

@@ -6,7 +6,7 @@ import React, { Component } from 'react'
 import { FlatList, Text, View, StyleSheet, TouchableOpacity } from 'react-native'
 
 // Redux
-import { connect }                      from 'react-redux'
+import { connect }                                             from 'react-redux'
 import { handleInput, fetchCategories, fetchItemsForCategory } from '../../store/modules/core/actions'
 
 // Utils
@@ -47,11 +47,17 @@ class CategoryOverviewScreen extends Component {
   }
 
   render() {
+    const {loading, categories} = this.props
+    const list                  = Object.values(categories)
+
     return (
         <View style={{flex: 1}}>
           <Text style={styles.title}>Star Wars Categories</Text>
+
+          {(loading && list.length === 0) && <Text>Loading...</Text>}
+
           <FlatList
-              data={Object.values(this.props.categories)}
+              data={list}
               keyExtractor={(item, index) => index.toString()}
               renderItem={this.renderListItem}
           />
@@ -78,7 +84,8 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state) {
   return {
-    categories: state.core.categories
+    categories: state.core.categories,
+    loading:    state.core.loading
   }
 }
 
