@@ -14,7 +14,7 @@ import { http } from '../../../common/utils'
  * ACTION CREATORS
  */
 
-export const hanldeInput = (field, value) => ({
+export const handleInput = (field, value) => ({
   type:    HANDLE_INPUT,
   payload: {field, value}
 })

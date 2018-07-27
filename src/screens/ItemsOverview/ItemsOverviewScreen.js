@@ -21,7 +21,7 @@ class ItemsOverviewScreen extends Component {
   }
 
   render() {
-    const {query, selectedCategory, items, navigation, hanldeInput} = this.props
+    const {query, selectedCategory, items, navigation, handleInput} = this.props
 
     return (
         <View style={styles.container}>
@@ -30,7 +30,7 @@ class ItemsOverviewScreen extends Component {
 
           <TextInput
               style={styles.searchTextInput}
-              onChangeText={(text) => hanldeInput(FIELDS.query, text)}
+              onChangeText={(text) => handleInput(FIELDS.query, text)}
               value={query}
               placeholder='Search...'
           />

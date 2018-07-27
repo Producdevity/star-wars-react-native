@@ -28,9 +28,9 @@ class CategoryOverviewScreen extends Component {
    * @param category
    */
   onPressListItem = (category: string) => {
-    const {hanldeInput, navigation, fetchItemsForCategory} = this.props
+    const {handleInput, navigation, fetchItemsForCategory} = this.props
 
-    hanldeInput(FIELDS.selectedCategory, category)
+    handleInput(FIELDS.selectedCategory, category)
 
     fetchItemsForCategory({category})
 
