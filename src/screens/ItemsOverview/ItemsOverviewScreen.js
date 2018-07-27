@@ -7,7 +7,6 @@ import { Text, View, StyleSheet, FlatList, TouchableOpacity } from 'react-native
 import { connect } from 'react-redux'
 
 // Data
-import { MOCK }   from '../../common/data'
 import { FIELDS } from '../../common/data/fields'
 
 class ItemsOverviewScreen extends Component {
