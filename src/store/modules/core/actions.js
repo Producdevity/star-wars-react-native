@@ -34,12 +34,11 @@ export const fetchItemsForCategory = ({category}) => async dispatch => {
 
   try {
     const data = await http.getByCategory(category)
-    console.log({data})
 
     dispatch(fetchItemsForCategoryDone({category, data}))
   }
   catch (error) {
-    console.error('error', error)
+    console.error('error', error.message || error)
   }
 
 }
@@ -66,7 +65,7 @@ export const fetchCategories = () => async dispatch => {
     dispatch(fetchCategoriesDone({data}))
   }
   catch (error) {
-    console.error('error', error)
+    console.error('error', error.message || error)
   }
 
 }
