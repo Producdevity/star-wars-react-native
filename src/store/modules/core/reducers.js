@@ -1,5 +1,3 @@
-import { MOCK } from '../../../common/data/mock'
-
 // Types
 import {
   HANDLE_INPUT,
