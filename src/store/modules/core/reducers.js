@@ -15,7 +15,8 @@ const initialState = {
     query: null
   },
   loading:    false,
-  categories: {}
+  categories: {},
+  items:      {}
 }
 
 const coreReducer = createReducer(initialState, {
@@ -45,8 +46,10 @@ const coreReducer = createReducer(initialState, {
   [FETCH_ITEMS_FOR_CATEGORY_DONE](state, {payload}) {
     return {
       ...state,
-      loading:            false,
-      [payload.category]: payload.data
+      loading: false,
+      items:   {
+        [payload.category]: payload.data
+      }
     }
   },
 
