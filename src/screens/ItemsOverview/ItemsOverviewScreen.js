@@ -5,6 +5,7 @@ import { Text, View, StyleSheet, FlatList, TouchableOpacity, TextInput } from 'r
 
 // Redux
 import { connect }               from 'react-redux'
+import { handleInput }           from '../../store/modules/core/actions'
 import { getFilterenItemsState } from '../../store/helpers/selectors'
 
 // Data
@@ -101,5 +102,9 @@ function mapStateToProps(state) {
   }
 }
 
+const mapDispatchToProps = {
+  handleInput
+}
 
-export default connect(mapStateToProps)(ItemsOverviewScreen)
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemsOverviewScreen)
