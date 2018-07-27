@@ -7,7 +7,7 @@ import { FlatList, Text, View, StyleSheet, TouchableOpacity } from 'react-native
 
 // Redux
 import { connect }                      from 'react-redux'
-import { hanldeInput, fetchCategories } from '../../store/modules/core/actions'
+import { hanldeInput, fetchCategories, fetchItemsForCategory } from '../../store/modules/core/actions'
 
 // Utils
 import { getKeyByValue } from '../../common/utils'
@@ -84,7 +84,8 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = {
   hanldeInput,
-  fetchCategories
+  fetchCategories,
+  fetchItemsForCategory
 }
 
 
