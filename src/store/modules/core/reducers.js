@@ -11,7 +11,9 @@ import {
 import { createReducer } from '../../helpers/createReducer'
 
 const initialState = {
-  inputs:     {},
+  inputs:     {
+    query: null
+  },
   loading:    false,
   categories: {}
 }
