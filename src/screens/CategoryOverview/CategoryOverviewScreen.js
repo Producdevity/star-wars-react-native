@@ -21,11 +21,20 @@ class CategoryOverviewScreen extends Component {
     this.props.fetchCategories()
   }
 
+  /**
+   * Set the input data for the selectedCategory
+   * fetch all the items that we want to use on the next screen
+   * navigate to next screen
+   * @param category
+   */
   onPressListItem = (category: string) => {
-    const {hanldeInput, navigation} = this.props
+    const {hanldeInput, navigation, fetchItemsForCategory} = this.props
 
     hanldeInput(FIELDS.selectedCategory, category)
-    navigation.navigate(ROUTES.CategoryItemsOverview)
+
+    fetchItemsForCategory({category})
+
+    navigation.navigate(ROUTES.ItemsOverview)
   }
 
   renderListItem = ({item}) => {
