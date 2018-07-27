@@ -7,7 +7,7 @@ import { is } from '../common/utils'
 import { ROUTES } from '../common/data'
 
 // Screens
-import CategoryItemsOverviewScreen from '../screens/CategoryItemsOverview/CategoryItemsOverviewScreen'
+import ItemsOverviewScreen from '../screens/ItemsOverview/ItemsOverviewScreen'
 import CategoryOverviewScreen      from '../screens/CategoryOverview/CategoryOverviewScreen'
 
 
@@ -16,8 +16,8 @@ const routeConfigMap = {
   [ROUTES.CategoryOverview]:      {
     screen: CategoryOverviewScreen
   },
-  [ROUTES.CategoryItemsOverview]: {
-    screen: CategoryItemsOverviewScreen
+  [ROUTES.ItemsOverview]: {
+    screen: ItemsOverviewScreen
   }
 }
 
